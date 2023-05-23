@@ -1,0 +1,16 @@
+footer {
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 6vw 0 2vw;
+    margin-top: 50px;
+}
+
+footer img {
+    margin-bottom: 3vw;
+}
+
+footer p {
+    font-size: 2vw;
+}
