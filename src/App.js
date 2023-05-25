@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Error404 from "./pages/Error404";
 import FicheLogements from "./pages/FicheLogements";
-import "./App.css";
+import "../src/styles/App.css";
 
 
 function App() {

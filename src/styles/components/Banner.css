@@ -1,0 +1,53 @@
+.Banner {
+    margin: 30px 40px ;
+    height: 223px;
+    border-radius: 25px;
+    background-color: #333333;
+}
+
+.Banner h1 {
+    font-size: 48px;
+    color: white;
+    margin-top: -150px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.Banner-Text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Banner img {
+    object-fit: cover;
+    height: 223px;
+    width : 100%;
+    border-radius: 25px;
+    opacity: 0.7;
+}
+
+@media screen and  (max-width : 550px) {
+    .Banner {
+        margin: 20px 20px ;
+        height: 111px;
+    }
+
+    .Banner h1 {
+        font-size: 24px;
+        margin-top: -70px;
+    }
+
+    .Banner img {
+        height: 111px;
+    }
+
+}
+
+@media screen and (max-width : 900px) and (min-width : 550px) {
+    .Banner h1 {
+        font-size: 36px;
+    }
+}
