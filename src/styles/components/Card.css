@@ -1,0 +1,28 @@
+
+.Card {
+    height: 340px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.Card :hover,
+.Card img :hover {
+    transform: scale(1.1);
+}
+
+.Card img {
+    height: 340px;
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.Card p {
+    color: white;
+    font-size: 18px;
+    padding-left: 5%;
+    padding-right: 40%;
+    margin-top: -70px;
+}
+

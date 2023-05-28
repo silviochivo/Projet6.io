@@ -1,8 +1,7 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import "../../styles/pages/Error.css";
-
 
 function Error404() {
   return (
@@ -18,5 +17,5 @@ function Error404() {
     </div>
   );
 }
-  
+
 export default Error404;

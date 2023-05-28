@@ -1,10 +1,7 @@
 
-
 header img {
     color: #FF6060;
 }
-
-
 
 header {
     display: flex;
@@ -41,6 +38,10 @@ ul {
 ul a {
     color: #FF6060 ;
     text-decoration: none;
+}
+
+ul a.nav-active {
+    text-decoration: underline;
 }
 
 @media screen and  (max-width : 550px) {
