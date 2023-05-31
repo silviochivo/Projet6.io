@@ -1,0 +1,52 @@
+
+.Collapse p {
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    color: #FF6060;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.Collapse img {
+    background: #FF6060;
+}
+
+.Collapse h2 {
+    color: #FFFFFF;
+}
+
+.Collapse-Title {
+    background: #FF6060;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.Toogled {
+    transform: rotate(180deg);
+}
+
+.Arrow-Collapsed {
+    transition: all 0.7s;
+}
+
+@media screen and  (max-width : 550px) {
+    .Collapse-Title {
+        font-size: 13px;
+    }
+    .Collapse-Title img {
+        width: 16px;
+    }
+    .Collapse p {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width : 1000px) and (min-width : 550px) {
+    .Collapse-Title img {
+        width: 20px;
+    }
+}
+

@@ -52,7 +52,7 @@ main p {
 }
 
 
-@media screen and (max-width : 900px) and (min-width : 550px) {
+@media screen and (max-width : 1000px) and (min-width : 550px) {
 
     main h1 {
         font-size: 200px;

@@ -6,8 +6,11 @@ function Card(props) {
     return (
         <div className="Card">
             <Link to={`/logement/${props.id}`}>
-                <img src={props.img} alt={props.title}/>
-                <p>{props.title}</p>
+                <div className="Card-image-wrapper">
+                    <img src={props.img} alt={props.title}/>
+                    <div className="Card-overlay"></div>
+                    <p>{props.title}</p>
+                </div>
             </Link>
         </div>
     )
