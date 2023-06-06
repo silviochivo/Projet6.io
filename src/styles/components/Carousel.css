@@ -1,0 +1,106 @@
+
+.Carousel {
+    height: 415px;
+    width: auto;
+    margin-right: 40px;
+    margin-left: 40px;
+    mix-blend-mode: normal;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.Carousel button {
+    border: none;
+    position: absolute;
+    background: none;
+}
+
+.Carousel img {
+    border-radius: 25px;
+    object-fit: cover;
+    width: 100%;
+    height: 415px;
+}
+
+.LeftArrow {
+    transform: rotate(180deg);
+}
+
+.RightButton {
+    margin-left: -90px;
+}
+
+.LeftButton {
+    margin-left: 30px;
+}
+
+.RightButton,
+.LeftButton {
+    height: 40px;
+    width: 50px;
+}
+
+.RightButton img,
+.LeftButton img {
+    object-fit: contain;
+}
+
+.Carousel button img {
+    background:none;
+}
+
+.Carousel p {
+    font-size: 18px;
+    color: white;
+    margin-top: -50px;
+}
+
+@media screen and (max-width : 1000px) and (min-width : 550px) {
+    .Carousel {
+        height: 325px;
+    }
+
+    .Carousel img {
+        height: 325px;
+    }
+
+    .RightButton {
+        margin-left: -70px;
+    }
+
+    .RightButton,
+    .LeftButton {
+        height: 30px;
+        width: 35px;
+    }
+}
+
+@media screen and  (max-width : 550px) {
+    .Carousel {
+        height: 225px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .Carousel img {
+        height: 225px;
+    }
+
+    .RightButton,
+    .LeftButton {
+        height: 25px;
+        width: 30px;
+    }
+
+    .RightButton {
+        margin-left: -50px;
+    }
+
+    .LeftButton {
+        margin-left: 20px;
+    }
+
+    .Carousel p {
+        visibility: hidden;
+    }
+}
