@@ -42,9 +42,8 @@ function About() {
       />
 
       {AboutInfo.map((e, index) => (
-        <div className="About">
+        <div className="About" key={index}>
           <Collapse 
-            key={index}  
             title={e.titre}
             content={e.description}
           />

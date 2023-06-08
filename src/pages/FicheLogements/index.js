@@ -17,7 +17,7 @@ function FicheLogements() {
 
   const FilteredLogements = logementList.filter (ListeLogements => ListeLogements.id === InfoURL.id);
   console.log(InfoURL)
-  console.log(logementList.filter(logement => logement.id==InfoURL.id))
+  //console.log(logementList.filter(logement => logement.id===InfoURL.id))
   
   if (FilteredLogements.length === 0) {
     // Redirection vers la page ERREUR
@@ -30,9 +30,9 @@ function FicheLogements() {
       <div>
         <Header />
 
-        {FilteredLogements.map((logement) => (
+        {FilteredLogements.map((logement, index) => (
           <Carousel
-            key={logement.id}
+            key={`${logement.id}-${index}`}
             images={logement.pictures} 
           />
         ))}
@@ -42,7 +42,7 @@ function FicheLogements() {
           <div className="Left-Info">
             <div className="Nom-Logement">
               {FilteredLogements.map((logement) => (
-                <h1 key={logement.id}>
+                <h1 key={`${logement.id}-${logement.title}`}>
                   {logement.title}
                 </h1>
               ))}
@@ -50,7 +50,7 @@ function FicheLogements() {
 
             <div className="Localisation-Logement">
               {FilteredLogements.map((logement) => (
-                <h2 key={logement.id}>
+                <h2 key={`${logement.id}-${logement.location}`}>
                   {logement.location}
                 </h2>
               ))}
@@ -58,8 +58,8 @@ function FicheLogements() {
 
             <div className="Tags-Logement">
               {FilteredLogements.map((logement) => (
-                logement.tags.map((tag, index) => (
-                  <h2 key={index}>
+                logement.tags.map((tag) => (
+                  <h2 key={`${logement.id}-${tag}`}>
                     {tag}
                   </h2>
                 ))
@@ -71,23 +71,24 @@ function FicheLogements() {
 
             <div className="Info-Proprietaire">
               {FilteredLogements.map((logement) => (
-                <h3>
+                <h3 key={`${logement.id}-${logement.host.name}`}>
                   {logement.host.name}
                 </h3>
               ))}
 
-              {FilteredLogements.map((logement, index) => (
+              {FilteredLogements.map((logement) => (
               <img
                 src={logement.host.picture}
-                key={index}
+                alt={logement.host.name}
+                key={`${logement.id}+${logement.host.name}`}
               />
               ))}
             </div>
 
             <div className="Rating-Box">
-              {FilteredLogements.map((logement, index) => (
+              {FilteredLogements.map((logement) => (
                 <Rating
-                  key={index}
+                  key={`${logement.id}-${logement.rating}`}
                   Note={logement.rating}
                 />
               ))}
@@ -98,22 +99,27 @@ function FicheLogements() {
         </div>
 
         {FilteredLogements.map((logement) => (
-          <div className="Info-Container" key={logement.id}>
+          <div className="Info-Container" >
             <Collapse
               title="Description"
+              key={`${logement.id}-${logement.description}`}
               content={logement.description}
             />
 
             <Collapse
               title="Équipements"
+              key={`${logement.id}-${logement.equipments}`}
               content={
-                <ul>
+                <>
                   {logement.equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
+                    <React.Fragment key={`${logement.id}-${equipment}-${index}`}>
+                      {equipment}
+                      <br />
+                    </React.Fragment>
                   ))}
-                </ul>
+                </>
               }
-              key={logement.id}
+              
             />
 
           </div>
