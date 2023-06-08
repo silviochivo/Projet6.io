@@ -30,9 +30,9 @@ function FicheLogements() {
       <div>
         <Header />
 
-        {FilteredLogements.map((logement, index) => (
+        {FilteredLogements.map((logement, Logementindex) => (
           <Carousel
-            key={`${logement.id}-${index}`}
+            key={`${logement.id}-${Logementindex}`}
             images={logement.pictures} 
           />
         ))}
@@ -68,7 +68,6 @@ function FicheLogements() {
           </div>
 
           <div className="Right-Info">
-
             <div className="Info-Proprietaire">
               {FilteredLogements.map((logement) => (
                 <h3 key={`${logement.id}-${logement.host.name}`}>
@@ -93,26 +92,25 @@ function FicheLogements() {
                 />
               ))}
             </div>
-
           </div>
 
         </div>
 
-        {FilteredLogements.map((logement) => (
-          <div className="Info-Container" >
+        {FilteredLogements.map((logement, Logindex) => (
+          <div className="Info-Container" key={`${logement.id}-${Logindex}`}>
             <Collapse
               title="Description"
-              key={`${logement.id}-${logement.description}`}
+              key={`${logement.id}-${Logindex}-description`}
               content={logement.description}
-            />
+            /> 
 
             <Collapse
               title="Équipements"
-              key={`${logement.id}-${logement.equipments}`}
+              key={`${logement.id}-${Logindex}-equipments`}
               content={
                 <>
-                  {logement.equipments.map((equipment, index) => (
-                    <React.Fragment key={`${logement.id}-${equipment}-${index}`}>
+                  {logement.equipments.map((equipment, equipmentIndex) => (
+                    <React.Fragment  key={`${logement.id}-${Logindex}-${equipment}-${equipmentIndex}`}>
                       {equipment}
                       <br />
                     </React.Fragment>
