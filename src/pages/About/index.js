@@ -36,10 +36,12 @@ function About() {
     <div>
       <Header />
 
+    <div className="Banner-About">
       <Banner 
         img={BannerAbout}
         name={imgAlt}
       />
+    </div>
 
       {AboutInfo.map((e, index) => (
         <div className="About" key={index}>

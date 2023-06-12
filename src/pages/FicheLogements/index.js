@@ -25,7 +25,6 @@ function FicheLogements() {
   }
 
 
-  
     return (
       <div>
         <Header />

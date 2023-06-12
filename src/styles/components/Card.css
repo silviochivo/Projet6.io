@@ -58,6 +58,12 @@
     .Card img {
         height: 335px;
     }
+
+    .Card:hover img,
+    .Card:hover .Card-overlay,
+    .Card:hover p {
+    transform: none;
+}
 }
 
 @media screen and (max-width : 1000px) and (min-width : 550px) {

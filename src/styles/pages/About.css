@@ -31,6 +31,12 @@
 
     .Collapse-Title{
         margin-top: 20px;
+        height: 30px;
+    }
+
+    .Banner-About .Banner,
+    .Banner-About img {
+        height: 223px;
     }
 }
 
@@ -44,10 +50,16 @@
     .Collapse-Title{
         font-size: 16px;
         margin-top: 25px;
+        height: 40px;
     }
 
     .Collapse p {
         font-size: 18px;
         padding: 24px 12px 22px 16px;
+    }
+
+    .Banner-About .Banner,
+    .Banner-About img {
+        height: 223px;
     }
 }
